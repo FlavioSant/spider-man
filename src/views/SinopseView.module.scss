@@ -107,7 +107,6 @@
   }
 
   @include breakpoints.and-up(md) {
-    width: 31.25rem;
     height: 31.25rem;
   }
 }

@@ -31,7 +31,7 @@ export const Header: React.FC = () => {
             <Link to="/sinopse">SINOPSE</Link>
           </li>
           <li>
-            <Link to="/">ELENCO</Link>
+            <Link to="/elenco">ELENCO</Link>
           </li>
         </ul>
       </nav>
