@@ -3,8 +3,10 @@
 .layout-container {
   display: flex;
   flex-direction: column;
+  position: relative;
   width: 100%;
   height: 100%;
+  z-index: 2;
 
   @include breakpoints.and-up(lg) {
     display: grid;
@@ -14,10 +16,21 @@
   }
 }
 
+.layout-background-image {
+  background: transparent url('../assets/background.png') no-repeat 0 0;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .main-container {
   grid-area: main;
   background: transparent;
   padding: 1rem;
   width: 100%;
   height: 100%;
+  z-index: 2;
 }

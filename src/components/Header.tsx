@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import marvelLogo from '../assets/marvel-logo.svg';
 import spiderLogo from '../assets/spider-logo.svg';
 
@@ -24,13 +25,13 @@ export const Header: React.FC = () => {
       >
         <ul>
           <li>
-            <a href="/">HOME</a>
+            <Link to="/">HOME</Link>
           </li>
           <li>
-            <a href="/">SINOPSE</a>
+            <Link to="/sinopse">SINOPSE</Link>
           </li>
           <li>
-            <a href="/">ELENCO</a>
+            <Link to="/">ELENCO</Link>
           </li>
         </ul>
       </nav>

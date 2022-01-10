@@ -8,6 +8,7 @@
   background: rgba(29, 29, 29, 0.5);
   grid-area: aside;
   padding: 2rem 0;
+  z-index: 2;
 
   @include breakpoints.and-up(lg) {
     padding: 10rem 0 0 0;
