@@ -9,7 +9,9 @@ export const HomeView: React.FC = () => {
   return (
     <DefaultLayout>
       <div className={styles['home-view-container']}>
-        <img src={milesMoralesLogo} alt="Logo Spider Man Miles Morales" />
+        <figure>
+          <img src={milesMoralesLogo} alt="Logo Spider Man Miles Morales" />
+        </figure>
 
         <a
           className={styles['trailer-link']}
