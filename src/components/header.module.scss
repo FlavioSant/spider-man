@@ -1,0 +1,113 @@
+@use '../styles/breakpoints.scss';
+
+.header-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  row-gap: 1rem;
+
+  background: rgba(29, 29, 29, 0.5);
+  grid-area: header;
+  padding: 1rem;
+  position: relative;
+
+  @include breakpoints.and-up(lg) {
+    flex-direction: row;
+    padding: 0;
+  }
+}
+
+.navbar-container {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+
+  ul {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+
+    list-style: none;
+
+    li {
+      color: var(--white);
+
+      a {
+        color: inherit;
+        font-size: 1.25rem;
+        font-weight: 400;
+        transition: color 0.2s;
+
+        &:hover {
+          color: var(--red);
+        }
+      }
+    }
+  }
+
+  @include breakpoints.and-up(lg) {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.is-menu-open {
+  visibility: visible;
+  opacity: 1;
+
+  ul {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+
+  @include breakpoints.and-up(lg) {
+    ul {
+      flex-direction: row;
+      row-gap: 0;
+    }
+  }
+}
+
+.toggler-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+
+  background: transparent;
+  border: 0;
+  border-width: 0;
+  font-size: 0;
+  width: 2.188rem;
+  height: 2.188rem;
+  padding: 0.313rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+
+  span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--white);
+    transition: transform 0.5s ease 0s, opacity 0.2s;
+  }
+
+  @include breakpoints.and-up(lg) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+}

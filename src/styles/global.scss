@@ -2,7 +2,7 @@
 
 :root {
   --red: #ec111a;
-  -white: #f9f9f9;
+  --white: #f9f9f9;
   --dark: #1d1d1d;
 }
 
@@ -36,6 +36,7 @@ html {
 }
 
 body {
+  background: transparent url('../assets/background.png') no-repeat 0 0;
   font-family: 'Sora', sans-serif;
   -webkit-font-smoothing: antialiased;
 }

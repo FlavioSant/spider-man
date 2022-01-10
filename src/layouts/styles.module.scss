@@ -1,0 +1,23 @@
+@use '../styles/breakpoints.scss';
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  @include breakpoints.and-up(lg) {
+    display: grid;
+    grid-template:
+      'aside header' 6.25rem
+      'aside main' 1fr / 6.25rem 1fr;
+  }
+}
+
+.main-container {
+  grid-area: main;
+  background: transparent;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+}
